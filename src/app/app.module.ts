@@ -15,6 +15,13 @@ import { DashboardComponent } from './components/layout/dashboard/dashboard.comp
 import { HeaderComponent } from './components/layout/header/header.component';
 import { YoutubelayoutComponent } from './components/layout/youtubelayout/youtubelayout.component';
 
+//services
+
+
+import { HttpserviceService } from './services/httpservice.service';
+import { ApiserviceService } from './services/apiservice.service';
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,11 +36,12 @@ import { YoutubelayoutComponent } from './components/layout/youtubelayout/youtub
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
+    HttpClientModule,
     //flex moduels
     FlexLayoutModule,
     FlexModule
   ],
-  providers: [],
+  providers: [HttpserviceService , ApiserviceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -10,14 +10,10 @@ const routes: Routes = [
     component: DashboardComponent,
 
     children : [
-      {
-        path : "",
-        component: UserComponent
-      },
-      {
-        path : "post",
-        component: PostComponent
-      }
+
+      {path : "", component: UserComponent },
+      {path : "post", component: PostComponent }
+
     ]
   }
 ];

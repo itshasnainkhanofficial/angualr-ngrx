@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from 'src/app/models/user';
+import { ApiserviceService } from 'src/app/services/apiservice.service';
 
 @Component({
   selector: 'app-user',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserComponent implements OnInit {
 
-  constructor() { }
+  constructor(private apiService : ApiserviceService) { }
+
+  users : User[] = [];
 
   ngOnInit(): void {
+    this.fatchData();
   }
 
+  fatchData(){
+    this.apiService.getAllPosts().subscribe(data => {
+      this.users = data;
+      console.log(this.users);
+    });
+  }
 }

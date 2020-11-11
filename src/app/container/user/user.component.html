@@ -1,1 +1,6 @@
-<p>user works!</p>
+<div fxLayout="column" fxLayoutAlign="start center" fxLayoutGap="30px">
+    <app-alluser  [users]="this.users"></app-alluser>
+    
+    <!-- <youtube-error (reload)="this.tryAgain()" *ngIf="this.error && !loading"></youtube-error> -->
+    <!-- <button *ngIf="!this.loading && !this.error" (click)="addUser()" mat-raised-button color="primary">Add User</button> -->
+  </div>

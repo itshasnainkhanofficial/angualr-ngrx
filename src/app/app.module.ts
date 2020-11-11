@@ -21,6 +21,8 @@ import { YoutubelayoutComponent } from './components/layout/youtubelayout/youtub
 import { HttpserviceService } from './services/httpservice.service';
 import { ApiserviceService } from './services/apiservice.service';
 import { HttpClientModule } from '@angular/common/http';
+import { SingleuserComponent } from './components/singleuser/singleuser.component';
+import { AlluserComponent } from './components/alluser/alluser.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { HttpClientModule } from '@angular/common/http';
     PostComponent,
     DashboardComponent,
     HeaderComponent,
-    YoutubelayoutComponent
+    YoutubelayoutComponent,
+    SingleuserComponent,
+    AlluserComponent
   ],
   imports: [
     BrowserModule,

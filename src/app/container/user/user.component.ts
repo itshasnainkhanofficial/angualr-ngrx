@@ -20,7 +20,6 @@ export class UserComponent implements OnInit {
   fatchData(){
     this.apiService.getAllPosts().subscribe(data => {
       this.users = data;
-      console.log(this.users);
     });
   }
 }

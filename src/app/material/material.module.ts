@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-
+import { CommonModule } from '@angular/common';
 //Angular Material Components
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatButtonModule} from '@angular/material/button';
@@ -70,6 +70,7 @@ const AllMaterialComponents = [
 @NgModule({
 
   imports: [
+    CommonModule,
     AllMaterialComponents
   ],
   exports : [

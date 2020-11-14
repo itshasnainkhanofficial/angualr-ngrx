@@ -23,6 +23,7 @@ import { ApiserviceService } from './services/apiservice.service';
 import { HttpClientModule } from '@angular/common/http';
 import { SingleuserComponent } from './components/singleuser/singleuser.component';
 import { AlluserComponent } from './components/alluser/alluser.component';
+import { StoreModule } from '@ngrx/store';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { AlluserComponent } from './components/alluser/alluser.component';
     HttpClientModule,
     //flex moduels
     FlexLayoutModule,
-    FlexModule
+    FlexModule,
+    StoreModule.forRoot({}, {})
   ],
   providers: [HttpserviceService , ApiserviceService],
   bootstrap: [AppComponent]

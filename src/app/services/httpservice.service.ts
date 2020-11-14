@@ -12,7 +12,7 @@ export class HttpserviceService {
   AUTH_TOKEN = 'auth_token';
   constructor(private httpClient : HttpClient) { }
 
-  get(url : string , params? : any) : Observable<any>{ // here params type should not be any
+  get(url : string , params? : any) : Observable<any>{ 
     const data = {params , headers: this.getAuthHeader()} ;
     return this.httpClient.get(this.baseUrl + url , data).pipe(catchError(this.errorHandler.bind(this)))
   }

@@ -24,6 +24,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { SingleuserComponent } from './components/singleuser/singleuser.component';
 import { AlluserComponent } from './components/alluser/alluser.component';
 import { StoreModule } from '@ngrx/store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -45,7 +47,8 @@ import { StoreModule } from '@ngrx/store';
     //flex moduels
     FlexLayoutModule,
     FlexModule,
-    StoreModule.forRoot({}, {})
+    StoreModule.forRoot({}, {}),
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production })
   ],
   providers: [HttpserviceService , ApiserviceService],
   bootstrap: [AppComponent]
